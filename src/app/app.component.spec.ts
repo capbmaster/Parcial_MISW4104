@@ -1,12 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { PlantModule } from './plant/plant.module';
+import {By} from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterModule.forRoot([])
+        RouterModule.forRoot([]),
+        PlantModule
       ],
       declarations: [
         AppComponent
@@ -30,6 +33,12 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, nursery');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Vivero El Otoño');
+  });
+
+  it('should render plans component', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    expect(fixture.debugElement.query(By.css("app-list-plants"))).toBeTruthy();
   });
 });
