@@ -10,6 +10,23 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.main-container .header_div{
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    height: 2px;
+    margin-bottom: 43px;
+}
+
+.main-container footer{
+    font-family: "Inter";
+    font-size: 18px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 800;
+}
+
+.main-container main{
+    min-height: 540px;
+}
+
 @media (max-width: 767.98px) {
   .main-container {
     padding: 10px;
